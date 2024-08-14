@@ -13,7 +13,7 @@
 
 :root {
     --bg-color: #fdfdfd;
-    --second-bg-color: #e3e8e5;
+    --second-bg-color: #e3e8e5; 
     --text-color: #333;
     --main-color: #754ef9;
     --shadow-color: rgba(0, 0, 0, .2);
@@ -466,11 +466,7 @@ span {
 /* team section design */
 
 .team {
-    /* display: flex;
-    align-items: center;
-    flex-direction: column; */
     background: var(--second-bg-color);
-    /* padding-bottom: 5rem; */
 }
 
 .container {
@@ -480,18 +476,11 @@ span {
     width: 100%;
     padding: 5rem 1rem;
     border-radius: 70px;
-    /* border-style: dotted; */
 }
 
 .swiper {
-    width: 100%; /*950px*/
+    width: 100%;
 }
-
-/* .card .image {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-} */
 
 .card-content img {
     width: 140px;
@@ -518,6 +507,7 @@ span {
     clip-path: circle(55% at 0 0);
     border-top-left-radius: 10px;
 }
+
 .card .card-content {
     position: relative;
     display: flex;
@@ -556,6 +546,27 @@ span {
 .swiper-button-prev {
     color: #0ef;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .swiper {
+        width: 100%;
+    }
+
+    .swiper-wrapper {
+        flex-direction: row;
+    }
+
+    .swiper-slide {
+        flex: 0 0 auto; /* Ensure that slides take only the space they need */
+        width: 100% !important; /* Ensure that each slide takes full width */
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+}
+
 
 /* contact section design  */
 
