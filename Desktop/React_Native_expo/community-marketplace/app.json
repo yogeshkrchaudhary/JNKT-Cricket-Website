@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "FoodOrdering",
-    "slug": "FoodOrdering",
+    "name": "community-marketplace",
+    "slug": "community-marketplace",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -30,8 +30,7 @@
       "expo-router"
     ],
     "experiments": {
-      "typedRoutes": true,
-      "tsconfigPaths":true
+      "typedRoutes": true
     }
   }
 }
