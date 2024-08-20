@@ -64,5 +64,60 @@ darkModeIcon.onclick = () => {
   document.body.classList.toggle('dark-mode');
 };
 
+// Gallary
+
+document.addEventListener("DOMContentLoaded", function() {
+  var userFeed = new Instafeed({
+      get: 'user',
+      target: "instafeed-container", 
+      resolution: 'standard_resolution', 
+      accessToken: 'IGQWROMTBIbGVmQ0FHbzVfa0NySjdwMklCa2lVSzhqN1dXYmF1Wllqb0tHRFhJZAU9haElJdGdrMndDSjBoOWpqdVhkTUJKTFh4U0F2NXRGM2VUdEJwVHpmUERBaGFJY3dOLXIwaXZAjNERqcm9UU25qY0trWWctZA28ZD', 
+      limit: null, // No limit to the number of images/videos displayed
+      after: function() {
+        // Add target="_blank" to all generated anchor tags
+        const links = document.querySelectorAll('#instafeed-container a');
+        links.forEach(function(link) {
+            link.setAttribute('target', '_blank');
+        });
+    }
+});
 
 
+  userFeed.run();
+
+  // Ensures the grid is always shown, even if no images are loaded
+  var instafeedContainer = document.getElementById('instafeed-container');
+  if (!instafeedContainer.hasChildNodes()) {
+      instafeedContainer.innerHTML = '<p>No Instagram posts available.</p>';
+  }
+});
+
+// Contact Us
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get form data
+      const fullName = document.querySelector('input[placeholder="Full Name"]').value;
+      const email = document.querySelector('input[placeholder="Email"]').value;
+      const mobileNumber = document.querySelector('input[placeholder="Mobile Number"]').value;
+      const subject = document.querySelector('input[placeholder="Subject"]').value;
+      const message = document.querySelector('textarea[placeholder="Your Message"]').value;
+
+      // Send email
+      Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "yogeshkrchaudhary@outlook.com",
+          Password: "D2C33151FFB139CCB6A5ED7DF0A76E80A73C",
+          To: "yogeshkrchaudhary@outlook.com",
+          From: "yogeshkrchaudhary@outlook.com", // Use the email address provided by the user
+          Subject: subject,
+          Body: `Name: ${fullName}<br>Email: ${email}<br>Mobile Number: ${mobileNumber}<br>Message: ${message}`
+      }).then(
+          message => alert("Message Sent Successfully")
+      ).catch(
+          error => alert("Failed to send message. Please try again.")
+      );
+  });
+});

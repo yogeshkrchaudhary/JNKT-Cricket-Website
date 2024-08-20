@@ -24,7 +24,7 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#facilities">Facilities</a>
-            <a href="#gallary">Gallary</a>
+            <a href="#gallery">Gallery</a>
             <a href="#team">Team</a>
             <a href="#contact">Contact</a>
 
@@ -154,18 +154,9 @@
             <!-- Instagram feed will be populated here -->
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
     
-    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.jgits@2.0.0rc1/src/instafeed.min.js"></script>
-    <script type="text/javascript">
-        var userFeed = new Instafeed({
-            get: 'user',
-            target: "instafeed-container", // This should match the ID of your container
-            resolution: 'high_resolution',
-            accessToken: 'IGQWRNNUlCaGZAQM0NoUjY5V2ZAKLU4yY2tMaXljaXpwWnZAURU8ycHpmU3FDMmxwdlVraVFuTUlyMm84ZAjNGaUJ0ZA3Uxc0oyRmFhUTlLdGlDQ3NZAQVpWMGZAIY3VhbGFuU2VPbW1Cb3k5NXhmWlVKbDQ0RmtFd0FFY3cZD',
-            limit: 8, // Set the number of images or videos to display
-        });
-        userFeed.run();
-    </script>
     
 
      <!--Team Section Design -->
@@ -271,7 +262,7 @@
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input type="text" placeholder="Email" required>
                     <span class="focus"></span>
                 </div>
             </div>
@@ -310,6 +301,9 @@
         </div>
     </footer>
 
+
+ <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+ <script src="https://smtpjs.com/v3/smtp.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
  <script src="script.js"></script>
 
