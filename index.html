@@ -156,7 +156,18 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
-    
+
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.jgits@2.0.0rc1/src/instafeed.min.js"></script>
+    <script type="text/javascript">
+        var userFeed = new Instafeed({
+            get: 'user',
+            target: "instafeed-container", // This should match the ID of your container
+            resolution: 'high_resolution',
+            accessToken: 'IGQWROQXFMN1Q0RFFHVDNKMzMxOFBCUmxnS3ZATcUxBU1EzOVRjMHBFbUNxaVhCb3RlanBtVjE4OFhBdU5NX3Rwd0ZAnLU1HYXlabkJiOGpuMjRRUjE1NU40SWtUM0NjdC1wc0dRSDl5N3M4N0MyM1JLZA29CZAEE1YUEZD',
+            limit: 8, // Set the number of images or videos to display
+        });
+        userFeed.run();
+    </script>
     
 
      <!--Team Section Design -->
