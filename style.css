@@ -101,10 +101,27 @@ section {
 .home {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .home .home-content {
     max-width: 44rem;
+    flex: 1;
+}
+
+.home .home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .home-image .right-image {
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 .2rem 1rem var(--shadow-color);
 }
 
 .home-content h3 {
