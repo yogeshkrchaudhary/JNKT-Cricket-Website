@@ -701,6 +701,10 @@ span {
 
 
 @media (max-width: 768px) {
+
+    .home .home-image {
+        display: none; /* Hide the image */
+    }
     .swiper {
         width: 100%;
     }
@@ -720,6 +724,10 @@ span {
 }
 
 @media (max-width: 720px) {
+
+    .home .home-image {
+        display: none; /* Hide the image */
+    }
 
     .header {
         background: var(--bg-color);
@@ -794,6 +802,10 @@ span {
 }
 
 @media (max-width: 520px) {
+
+    .home .home-image {
+        display: none; /* Hide the image */
+    }
     html {
         font-size: 50%;
     }
@@ -809,7 +821,10 @@ span {
 }
 
 @media (max-width: 450px) {
-    html {
+    .home .home-image {
+        display: none; /* Hide the image */
+    }
+    .html {
         font-size: 50%;
     }
 
@@ -865,6 +880,10 @@ span {
 }
 
 @media (max-width: 375px) {
+
+    .home .home-image {
+        display: none; /* Hide the image */
+    }
     .home {
         justify-content: center;
         padding: 0 2% 30rem;
